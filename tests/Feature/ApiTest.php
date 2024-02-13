@@ -19,3 +19,15 @@ it('can add plant', function () {
 
 
 });
+
+it('can add enviroment', function () {
+
+    $response = $this->post('/api/plant/1/environment', ['data' => [
+
+    ]]);
+    //Assert that the response has a 200 status code
+    $response->assertStatus(200);
+
+
+
+});

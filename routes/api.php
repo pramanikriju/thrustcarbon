@@ -20,3 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('plant',[PlantController::class, 'create']);
+
+Route::get('/plant/{plant}/environment',[PlantController::class, 'getEnvironment'])->name('get-environment');
+Route::post('/plant/{plant}/environment',[PlantController::class, 'SetEnvironment'])->name('set-environment');
